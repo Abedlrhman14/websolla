@@ -10,7 +10,9 @@ class Order extends Model
         'customer_name',
         'phone',
         'address',
+        'cart'
     ];
+        // the order have many items
     public function items(){
         return $this->hasMany(OrderItem::class);
     }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('customer_name');
             $table->string('phone');
             $table->text('address');
+            $table->longText('cart');
             $table->timestamps();
         });
     }

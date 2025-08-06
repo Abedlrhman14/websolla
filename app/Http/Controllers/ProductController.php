@@ -39,12 +39,12 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('product added successfuly');
     }
 
-    // update product
+    // update product form
         public function edit(Product $product){
             return view('products.edit', compact('product'));
 
         }
-
+    // update product
     public function update(Request $request , Product $product){
         $request->validate([
             'name' => 'required|string|max:255',

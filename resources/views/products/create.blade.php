@@ -53,20 +53,20 @@
         <div id="result"></div>
 
         @section('scripts')
-
+            {{-- Ajax --}}
             <script>
-                $('productForm').submit(function(e){
+                $('#productForm').submit(function(e){
                     e.preventDefault();
                     let formData = new FormData(this);
 
                     $.ajax({
                           url : "{{ route('products.store') }}",
                         type:'post',
-                        data: 'formData',
+                        data: formData,
                         contentType:false,
                         processData:false,
                         success:function(response){
-                          $('#result').html("<div class='alert alert-success'>Product Added successfully</div>");
+                               window.location.href = '/dashboard';
                             $('#productForm')[0].reset();
                         },
                         error:function(xhr){

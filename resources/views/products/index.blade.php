@@ -6,7 +6,10 @@
         {{-- this section for header to add products --}}
         <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2>Products List</h2>
-                <a href="{{route('products.create')}}" class="btn btn-success">Add Product</a>
+                <div>
+                     <a href="{{route('products.create')}}" class="btn btn-success">Add Product</a>
+                     <a href="{{route('orders')}} "class="btn btn-success">manage orders</a>
+                </div>
         </div>
         <div class="row">
             {{-- this section for list the products --}}
@@ -48,7 +51,6 @@
                         },
                         success:function (response){
                             $('.product-card-' + productId).remove();
-                            alert("product deleted successfuly");
                         },
                         error:function (xhr){
                             alert('something wrong');
