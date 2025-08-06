@@ -40,7 +40,7 @@ This is a basic e-commerce application built with **Laravel**. It allows users t
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/Abedlrhman14/websolla.git
    cd your-project
 
 2. **Install dependencies**
